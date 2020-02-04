@@ -81,10 +81,12 @@ $(document).ready(function() {
     
     
     // display current date & time
-    
+    $("#currentDay").text(moment().format("dddd" + ", " + "MMMM Do YYYY" + ", " + "h:mm:ss a"));
+
     // past, present, and future time slot colors
+
     
-    
+
 }); // end of code
 
 

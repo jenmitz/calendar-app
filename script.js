@@ -1,3 +1,93 @@
+
+$(document).ready(function() {
+    
+    // save buttons for each hour [working]
+    var saveNine = $("#save9");
+    var saveTen = $("#save10");
+    var saveEleven = $("#save11");
+    var saveTwelve = $("#save12");
+    var saveOne = $("#save1");
+    var saveTwo = $("#save2");
+    var saveThree = $("#save3");
+    var saveFour = $("#save4");
+    var saveFive = $("#save5");
+    
+
+    // input fields (time blocks) for each hour [working]
+    var inputNine = $("#input9");
+    var inputTen = $("#input10");
+    var inputEleven = $("#input11");
+    var inputTwelve = $("#input12");
+    var inputOne = $("#input1");
+    var inputTwo = $("#input2");
+    var inputThree = $("#input3");
+    var inputFour = $("#input4");
+    var inputFive = $("#input5");
+    
+
+    // save input to local storage on click [working]
+    $(saveNine).on("click", function() {
+        localStorage.setItem(this.id, inputNine.val());        
+    });
+    inputNine.val(localStorage.getItem("save9"))
+    
+
+    $(saveTen).on("click", function() {
+        localStorage.setItem(this.id, inputTen.val());        
+    });
+    inputTen.val(localStorage.getItem("save10"))
+
+
+    $(saveEleven).on("click", function() {
+        localStorage.setItem(this.id, inputEleven.val());        
+    });
+    inputEleven.val(localStorage.getItem("save11"))
+    
+
+    $(saveTwelve).on("click", function() {
+        localStorage.setItem(this.id, inputTwelve.val());        
+    });
+    inputTwelve.val(localStorage.getItem("save12"))
+    
+
+    $(saveOne).on("click", function() {
+        localStorage.setItem(this.id, inputOne.val());        
+    });
+    inputOne.val(localStorage.getItem("save1"))
+    
+
+    $(saveTwo).on("click", function() {
+        localStorage.setItem(this.id, inputTwo.val());        
+    });
+    inputTwo.val(localStorage.getItem("save2"))
+    
+
+    $(saveThree).on("click", function() {
+        localStorage.setItem(this.id, inputThree.val());        
+    });
+    inputThree.val(localStorage.getItem("save3"))
+    
+
+    $(saveFour).on("click", function() {
+        localStorage.setItem(this.id, inputFour.val());        
+    });
+    inputFour.val(localStorage.getItem("save4"))
+    
+
+    $(saveFive).on("click", function() {
+        localStorage.setItem(this.id, inputFive.val());        
+    });
+    inputFive.val(localStorage.getItem("save5"))
+    
+    
+    // display current date & time
+    
+    // past, present, and future time slot colors
+    
+    
+}); // end of code
+
+
 /*
 
 basics:
@@ -15,72 +105,4 @@ steps:
 4. recognize current date based on time zone
 5. determine whether each time slot is past, present, or future; color code accordingly
 
-notes to self:
-- save buttons need to listen for a click, then run the function saveInput
-- saveInput (function) saves the input to localStorage
-- each save button needs to only save the info for its corresponding time slot
-- PREVENT DEFAULT? (don't delete on refresh?)
-
 */
-
-
-// save buttons for each hour [working]
-var saveNine = $("#save9");
-var saveTen = $("#save10");
-var saveEleven = $("#save11");
-var saveTwelve = $("#save12");
-var saveOne = $("#save1");
-var saveTwo = $("#save2");
-var saveThree = $("#save3");
-var saveFour = $("#save4");
-var saveFive = $("#save5");
-
-// input fields (time blocks) for each hour [working]
-var inputNine = $("#input9");
-var inputTen = $("#input10");
-var inputEleven = $("#input11");
-var inputTwelve = $("#input12");
-var inputOne = $("#input1");
-var inputTwo = $("#input2");
-var inputThree = $("#input3");
-var inputFour = $("#input4");
-var inputFive = $("#input5");
-
-
-// save input to local storage on click [working]
-function saveInput() {
-    var saveIt = localStorage.getItem("save9");
-    $(inputNine).val(saveIt);
-};
-
-$(saveNine).on("click", function() {
-    localStorage.setItem($(this).val(), inputNine.val());
-});
-
-saveInput();
-
-
-
-// retrieve input on reload/refresh [not working]
-window.onload = function() {
-    var nine = localStorage.getItem(inputNine);
-    if (nine !== null)
-        $("#input9").val(nine);
-};
-
-
-function retrieveInput () {
-    var saved = localStorage.getItem("input9");
-    if (saved) {
-    	input9.innerHTML = saved;
-    }
-};
-retrieveInput();
-
-
-
-// display current date & time
-
-// past, present, and future time slot colors
-
-

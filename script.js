@@ -80,10 +80,108 @@ $(document).ready(function() {
     inputFive.val(localStorage.getItem("save5"))
     
     
-    // display current date & time
-    $("#currentDay").text(moment().format("dddd" + ", " + "MMMM Do YYYY" + ", " + "h:mm:ss a"));
+    // display current date & time, & update time every second [working]
+   var updateTime = function() {
+        $(".time-block").innerHTML = 
+        $("#currentDay").text(moment().format("dddd" + ", " + "MMMM Do YYYY" + ", " + "h:mm:ss a"));
+    };
+    setInterval(updateTime, 1000);
 
-    // past, present, and future time slot colors
+    updateTime();
+
+    // past, present, and future time slot colors [not working]
+    if(moment().hour() === 9) {
+        inputNine
+        inputTen
+        inputEleven
+        inputTwelve
+        inputOne
+        inputTwo
+        inputThree
+        inputFour
+        inputFive
+    } else if (moment().hour() === 10) {
+        inputNine
+        inputTen.style
+        inputEleven
+        inputTwelve
+        inputOne
+        inputTwo
+        inputThree
+        inputFour
+        inputFive
+    } else if (moment().hour() === 11) {
+        inputNine
+        inputTen
+        inputEleven
+        inputTwelve
+        inputOne
+        inputTwo
+        inputThree
+        inputFour
+        inputFive
+    } else if (moment().hour() === 12) {
+        inputNine
+        inputTen
+        inputEleven
+        inputTwelve
+        inputOne
+        inputTwo
+        inputThree
+        inputFour
+        inputFive
+    } else if (moment().hour() === 13) {
+        inputNine
+        inputTen
+        inputEleven
+        inputTwelve
+        inputOne
+        inputTwo
+        inputThree
+        inputFour
+        inputFive
+    } else if (moment().hour() === 14) {
+        inputNine
+        inputTen
+        inputEleven
+        inputTwelve
+        inputOne
+        inputTwo
+        inputThree
+        inputFour
+        inputFive
+    } else if (moment().hour() === 15) {
+        inputNine
+        inputTen
+        inputEleven
+        inputTwelve
+        inputOne
+        inputTwo
+        inputThree
+        inputFour
+        inputFive
+    } else if (moment().hour() === 16) {
+        inputNine
+        inputTen
+        inputEleven
+        inputTwelve
+        inputOne
+        inputTwo
+        inputThree
+        inputFour
+        inputFive
+    } else if (moment().hour() === 17) {
+        inputNine
+        inputTen
+        inputEleven
+        inputTwelve
+        inputOne
+        inputTwo
+        inputThree
+        inputFour
+        inputFive
+    };
+
 
     
 

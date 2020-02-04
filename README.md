@@ -1,20 +1,19 @@
-## Day Planner ##
+# Day Planner #
 
-
-** Description **
+### Description ###
 This is a 9-5 work day calendar in which you can store a task to each hour of the day. 
 
 
-** Current Features **
+### Current Features ###
 - Save buttons save the corresponding hours' input to local storage
+- Displays current date and time, updated every second
 
 
-** Upcoming Features **
-- Current date and time display
+### Upcoming Features ###
 - Hourly color-coordination based on current time
 
 
-** Technologies Used **
+### Technologies Used ###
 - HTML
 - CSS
 - JavaScript

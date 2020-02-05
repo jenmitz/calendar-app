@@ -24,6 +24,9 @@ $(document).ready(function() {
     var inputFour = $("#input4");
     var inputFive = $("#input5");
     
+    // input class
+    var timeBlock = $(".time-block");
+
 
     // save input to local storage on click [working]
     $(saveNine).on("click", function() {
@@ -89,101 +92,94 @@ $(document).ready(function() {
 
     updateTime();
 
+
+    // set current hour to variable [working]
+    var currentHour = moment().hour();
+
+
     // past, present, and future time slot colors [not working]
-    if(moment().hour() === 9) {
-        inputNine
-        inputTen
-        inputEleven
-        inputTwelve
-        inputOne
-        inputTwo
-        inputThree
-        inputFour
-        inputFive
-    } else if (moment().hour() === 10) {
-        inputNine
-        inputTen.style
-        inputEleven
-        inputTwelve
-        inputOne
-        inputTwo
-        inputThree
-        inputFour
-        inputFive
-    } else if (moment().hour() === 11) {
-        inputNine
-        inputTen
-        inputEleven
-        inputTwelve
-        inputOne
-        inputTwo
-        inputThree
-        inputFour
-        inputFive
-    } else if (moment().hour() === 12) {
-        inputNine
-        inputTen
-        inputEleven
-        inputTwelve
-        inputOne
-        inputTwo
-        inputThree
-        inputFour
-        inputFive
-    } else if (moment().hour() === 13) {
-        inputNine
-        inputTen
-        inputEleven
-        inputTwelve
-        inputOne
-        inputTwo
-        inputThree
-        inputFour
-        inputFive
-    } else if (moment().hour() === 14) {
-        inputNine
-        inputTen
-        inputEleven
-        inputTwelve
-        inputOne
-        inputTwo
-        inputThree
-        inputFour
-        inputFive
-    } else if (moment().hour() === 15) {
-        inputNine
-        inputTen
-        inputEleven
-        inputTwelve
-        inputOne
-        inputTwo
-        inputThree
-        inputFour
-        inputFive
-    } else if (moment().hour() === 16) {
-        inputNine
-        inputTen
-        inputEleven
-        inputTwelve
-        inputOne
-        inputTwo
-        inputThree
-        inputFour
-        inputFive
-    } else if (moment().hour() === 17) {
-        inputNine
-        inputTen
-        inputEleven
-        inputTwelve
-        inputOne
-        inputTwo
-        inputThree
-        inputFour
-        inputFive
+    if(currentHour !== 9 || 10 || 11 || 12 || 13 || 14 || 15 || 16 || 17) {
+        timeBlock.classList.add("future")
     };
 
 
+    if(currentHour == 9) {
+        inputNine.classList.add("present")
+    } else if (currentHour > 9) 
+        inputNine.classList.add("past")
+    else (currentHour < 9)
+        inputNine.classList.add("future");
+
+
+    if(currentHour == 10) {
+        inputTen.classList.add("present")
+    } else if (currentHour > 10)
+        inputTen.classList.add("past")
+    else (currentHour < 10)
+        inputTen.classList.add("future");
+
+
+    if(currentHour == 11) {
+        inputEleven.classList.add("present")
+    } else if (currentHour > 11)
+        inputEleven.classList.add("past")
+    else (currentHour < 11)
+        inputEleven.classList.add("future");
+
+
+
+    if(currentHour == 12) {
+        inputTwelve.classList.add("present")
+    } else if (currentHour > 12)
+        inputTwelve.classList.add("past")
+    else (currentHour < 12)
+        inputTwelve.classList.add("future");
+
+
+
+    if(currentHour == 13) {
+        inputOne.classList.add("present")
+    } else if (currentHour > 13)
+        inputOne.classList.add("past")   
+    else (currentHour < 13)
+        inputOne.classList.add("future");
+
+
+
+    if(currentHour == 14) {
+        inputTwo.classList.add("present")
+    } else if (currentHour > 14)
+        inputTwo.classList.add("past")
+    else (currentHour < 14)
+        inputTwo.classList.add("future");
+
+
+
+    if(currentHour == 15) {
+        inputThree.classList.add("present")
+    } else if (currentHour > 15)
+        inputThree.classList.add("past")
+    else (currentHour < 15)
+        inputThree.classList.add("future");
     
+
+
+    if(currentHour == 16) {
+        inputFour.classList.add("present")
+    } else if (currentHour > 16)
+        inputFour.classList.add("past")
+    else (currentHour < 16)
+        inputFour.classList.add("future");
+
+
+
+    if(currentHour == 17) {
+        inputFive.classList.add("present")
+    } else if (currentHour > 17)
+        inputFive.classList.add("past")                
+    else (currentHour < 17)
+        inputFive.classList.add("future");
+
 
 }); // end of code
 

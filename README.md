@@ -11,6 +11,7 @@ This is a 9-5 work day calendar in which you can store a task to each hour of th
 
 ### Upcoming Features ###
 - Hourly color-coordination based on current time
+- Dynamic scaling
 
 
 ### Technologies Used ###

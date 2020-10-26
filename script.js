@@ -1,4 +1,3 @@
-
 $(document).ready(function() {
     
     // save buttons for each hour
@@ -89,7 +88,7 @@ $(document).ready(function() {
     updateTime();
 
 
-    // set current hour to variable [working]
+    // set current hour to variable
     var currentHour = moment().hour();
 
     // set past, present, and future time slot colors
@@ -166,23 +165,3 @@ $(document).ready(function() {
     };
 
 });
-
-
-/*
-
-basics:
-1. problem: create a day planner based on the standard 9-5 work day that has time slots (color-coded), 
-    shows the current date, and saves the users input
-2. inputs: text input, save button
-3. outputs: current date, color-coded time slots, storing of input
-4. functions: save input (button), keep input saved after refresh, color code based on time, check 
-    current time to determine color-coding, show current date
-
-steps: 
-1. style and format (HTML/CSS)
-2. declare necessary variables (save buttons and inputs for each time)
-3. create save function that saves input to localStorage (button)
-4. recognize current date based on time zone
-5. determine whether each time slot is past, present, or future; color code accordingly
-
-*/

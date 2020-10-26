@@ -1,7 +1,7 @@
 
 $(document).ready(function() {
     
-    // save buttons for each hour [working]
+    // save buttons for each hour
     var saveNine = $("#save9");
     var saveTen = $("#save10");
     var saveEleven = $("#save11");
@@ -11,9 +11,8 @@ $(document).ready(function() {
     var saveThree = $("#save3");
     var saveFour = $("#save4");
     var saveFive = $("#save5");
-    
 
-    // input fields (time blocks) for each hour [working]
+    // input fields (time blocks) for each hour
     var inputNine = $("#input9");
     var inputTen = $("#input10");
     var inputEleven = $("#input11");
@@ -23,12 +22,9 @@ $(document).ready(function() {
     var inputThree = $("#input3");
     var inputFour = $("#input4");
     var inputFive = $("#input5");
-    
-    // input class
-    var timeBlock = $(".time-block");
 
 
-    // save input to local storage on click [working]
+    // save input to local storage on click
     $(saveNine).on("click", function() {
         localStorage.setItem(this.id, inputNine.val());        
     });
@@ -83,10 +79,10 @@ $(document).ready(function() {
     inputFive.val(localStorage.getItem("save5"))
     
     
-    // display current date & time, & update time every second [working]
+    // display current date & time, & update time every second
    var updateTime = function() {
         $(".time-block").innerHTML = 
-        $("#currentDay").text(moment().format("dddd" + ", " + "MMMM Do YYYY" + ", " + "h:mm:ss a"));
+            $("#currentDay").text(moment().format("dddd" + ", " + "MMMM Do YYYY" + ", " + "h:mm a"));
     };
     setInterval(updateTime, 1000);
 
@@ -96,92 +92,80 @@ $(document).ready(function() {
     // set current hour to variable [working]
     var currentHour = moment().hour();
 
-
-    // past, present, and future time slot colors [not working]
-    if(currentHour !== 9 || 10 || 11 || 12 || 13 || 14 || 15 || 16 || 17) {
-        timeBlock.classList.add("future")
+    // set past, present, and future time slot colors
+    if (currentHour === 9) {
+        input9.classList.add("present")
+    } else if (currentHour > 9) {
+        input9.classList.add("past")
+    } else if (currentHour < 9) {
+        input9.classList.add("future");
     };
 
+    if (currentHour === 10) {
+        input10.classList.add("present")
+    } else if (currentHour > 10) {
+        input10.classList.add("past")
+    } else if (currentHour < 10) {  
+        input10.classList.add("future");
+    };
 
-    if(currentHour == 9) {
-        inputNine.classList.add("present")
-    } else if (currentHour > 9) 
-        inputNine.classList.add("past")
-    else (currentHour < 9)
-        inputNine.classList.add("future");
+    if (currentHour === 11) {
+        input11.classList.add("present")
+    } else if (currentHour > 11) {
+        input11.classList.add("past")
+    } else if (currentHour < 11) {  
+        input11.classList.add("future");
+    };
 
+    if (currentHour === 12) {
+        input12.classList.add("present")
+    } else if (currentHour > 12) {
+        input12.classList.add("past")
+    } else if (currentHour < 12) {  
+        input12.classList.add("future");
+    };
 
-    if(currentHour == 10) {
-        inputTen.classList.add("present")
-    } else if (currentHour > 10)
-        inputTen.classList.add("past")
-    else (currentHour < 10)
-        inputTen.classList.add("future");
+    if (currentHour === 13) {
+        input1.classList.add("present")
+    } else if (currentHour > 13) {
+        input1.classList.add("past")   
+    } else if (currentHour < 13) {  
+        input1.classList.add("future");
+    };
 
+    if (currentHour === 14) {
+        input2.classList.add("present")
+    } else if (currentHour > 14) {
+        input2.classList.add("past")
+    } else if (currentHour < 14) {  
+        input2.classList.add("future");
+    };
 
-    if(currentHour == 11) {
-        inputEleven.classList.add("present")
-    } else if (currentHour > 11)
-        inputEleven.classList.add("past")
-    else (currentHour < 11)
-        inputEleven.classList.add("future");
+    if (currentHour === 15) {
+        input3.classList.add("present")
+    } else if (currentHour > 15) {
+        input3.classList.add("past")
+    } else if (currentHour < 15) {  
+        input3.classList.add("future");
+    };
 
+    if (currentHour === 16) {
+        input4.classList.add("present")
+    } else if (currentHour > 16) {
+        input4.classList.add("past")
+    } else if (currentHour < 16) {  
+        input4.classList.add("future");
+    };
 
+    if (currentHour === 17) {
+        input5.classList.add("present")
+    } else if (currentHour > 17) {
+        input5.classList.add("past")                
+    } else if (currentHour < 17) {  
+        input5.classList.add("future");
+    };
 
-    if(currentHour == 12) {
-        inputTwelve.classList.add("present")
-    } else if (currentHour > 12)
-        inputTwelve.classList.add("past")
-    else (currentHour < 12)
-        inputTwelve.classList.add("future");
-
-
-
-    if(currentHour == 13) {
-        inputOne.classList.add("present")
-    } else if (currentHour > 13)
-        inputOne.classList.add("past")   
-    else (currentHour < 13)
-        inputOne.classList.add("future");
-
-
-
-    if(currentHour == 14) {
-        inputTwo.classList.add("present")
-    } else if (currentHour > 14)
-        inputTwo.classList.add("past")
-    else (currentHour < 14)
-        inputTwo.classList.add("future");
-
-
-
-    if(currentHour == 15) {
-        inputThree.classList.add("present")
-    } else if (currentHour > 15)
-        inputThree.classList.add("past")
-    else (currentHour < 15)
-        inputThree.classList.add("future");
-    
-
-
-    if(currentHour == 16) {
-        inputFour.classList.add("present")
-    } else if (currentHour > 16)
-        inputFour.classList.add("past")
-    else (currentHour < 16)
-        inputFour.classList.add("future");
-
-
-
-    if(currentHour == 17) {
-        inputFive.classList.add("present")
-    } else if (currentHour > 17)
-        inputFive.classList.add("past")                
-    else (currentHour < 17)
-        inputFive.classList.add("future");
-
-
-}); // end of code
+});
 
 
 /*

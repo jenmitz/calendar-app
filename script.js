@@ -1,26 +1,26 @@
 $(document).ready(function() {
     
     // save buttons for each hour
-    var saveNine = $("#save9");
-    var saveTen = $("#save10");
-    var saveEleven = $("#save11");
-    var saveTwelve = $("#save12");
-    var saveOne = $("#save1");
-    var saveTwo = $("#save2");
-    var saveThree = $("#save3");
-    var saveFour = $("#save4");
-    var saveFive = $("#save5");
+    let saveNine = $("#save9");
+    let saveTen = $("#save10");
+    let saveEleven = $("#save11");
+    let saveTwelve = $("#save12");
+    let saveOne = $("#save1");
+    let saveTwo = $("#save2");
+    let saveThree = $("#save3");
+    let saveFour = $("#save4");
+    let saveFive = $("#save5");
 
     // input fields (time blocks) for each hour
-    var inputNine = $("#input9");
-    var inputTen = $("#input10");
-    var inputEleven = $("#input11");
-    var inputTwelve = $("#input12");
-    var inputOne = $("#input1");
-    var inputTwo = $("#input2");
-    var inputThree = $("#input3");
-    var inputFour = $("#input4");
-    var inputFive = $("#input5");
+    let inputNine = $("#input9");
+    let inputTen = $("#input10");
+    let inputEleven = $("#input11");
+    let inputTwelve = $("#input12");
+    let inputOne = $("#input1");
+    let inputTwo = $("#input2");
+    let inputThree = $("#input3");
+    let inputFour = $("#input4");
+    let inputFive = $("#input5");
 
 
     // save input to local storage on click
@@ -79,7 +79,7 @@ $(document).ready(function() {
     
     
     // display current date & time, & update time every second
-   var updateTime = function() {
+    let updateTime = function() {
         $(".time-block").innerHTML = 
             $("#currentDay").text(moment().format("dddd" + ", " + "MMMM Do YYYY" + ", " + "h:mm a"));
     };
@@ -89,7 +89,7 @@ $(document).ready(function() {
 
 
     // set current hour to variable
-    var currentHour = moment().hour();
+    let currentHour = moment().hour();
 
     // set past, present, and future time slot colors
     if (currentHour === 9) {
